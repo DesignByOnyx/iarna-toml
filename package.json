@@ -65,6 +65,9 @@
     "lib/format-num.js",
     "index.d.ts"
   ],
+  "engines": {
+    "node": ">=6.6.0"
+  },
   "directories": {
     "test": "test"
   },
