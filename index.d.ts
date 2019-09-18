@@ -1,5 +1,3 @@
-import { Transform } from "stream";
-
 type JsonArray = boolean[] | number[] | string[] | JsonMap[] | Date[]
 type AnyJson = boolean | number | string | JsonMap | Date | JsonArray | JsonArray[]
 
@@ -24,12 +22,6 @@ interface FuncParse {
    * Asynchronously parse a TOML string and return a promise of the resulting object.
    */
   async (toml: string, options?: ParseOptions): Promise<JsonMap>
-
-  /**
-   * Given a readable stream, parse it as it feeds us data. Return a promise of the resulting object.
-   */
-  stream (readable: NodeJS.ReadableStream): Promise<JsonMap>
-  stream (): Transform
 }
 
 interface FuncStringify {
